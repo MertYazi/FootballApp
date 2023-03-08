@@ -6,7 +6,7 @@ Project is written in Kotlin.💯
 <br />
 
 | Mode  | Matches Today | Saved Matches | Leagues | League Table | Team Details |
-|------|------|------|------|
+|------|------|------|------|------|------|
 | Dark | <img src="screenshots/matches_today_dark.jpg" width="165"> | <img src="screenshots/saved_matches_dark.jpg" width="165"> | <img src="screenshots/leagues_dark.jpg" width="165"> | <img src="screenshots/league_table_dark.jpg" width="165"> | <img src="screenshots/team_details_dark.jpg" width="165"> |
 | Light | <img src="screenshots/matches_today_light.jpg" width="165"> | <img src="screenshots/saved_matches_light.jpg" width="165"> | <img src="screenshots/leagues_light.jpg" width="165"> | <img src="screenshots/league_table_light.jpg" width="165"> | <img src="screenshots/team_details_light.jpg" width="165"> |
 
