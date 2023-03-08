@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.LeagueTableFragment">
+
+    <TextView
+        android:id="@+id/tv_league_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        tools:text="Premier League"
+        android:fontFamily="@font/klaudia_bold"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_league_emblem"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="36dp"
+        tools:src="@drawable/ic_ball"
+        android:contentDescription="@string/image_league"
+        app:layout_constraintTop_toBottomOf="@+id/tv_league_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_titles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_league_emblem"
+        app:layout_constraintBottom_toTopOf="@id/nsv_tables">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="4dp"
+            android:gravity="end"
+            tools:text="@string/teams"
+            android:textSize="16sp"
+            android:fontFamily="@font/klaudia_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_played"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            tools:text="GP"
+            android:textSize="14sp"
+            android:fontFamily="@font/klaudia_bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_won"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_won"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            tools:text="W"
+            android:textSize="14sp"
+            android:fontFamily="@font/klaudia_bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_drawn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_drawn"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            tools:text="D"
+            android:textSize="14sp"
+            android:fontFamily="@font/klaudia_bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_lost"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_lost"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            tools:text="L"
+            android:textSize="14sp"
+            android:fontFamily="@font/klaudia_bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_points"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_points"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            tools:text="PTS"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/klaudia_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_tables"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingBottom="300dp"
+        app:layout_constraintTop_toBottomOf="@+id/cl_titles">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_tables"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="36dp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_tables_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="36dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/rv_tables" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_tables_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="36dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/rv_tables_2" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_tables_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="36dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/rv_tables_3" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_tables_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="36dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/rv_tables_4" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_tables_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="36dp"
+                app:layout_constraintTop_toBottomOf="@+id/rv_tables_5" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_tables_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="36dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/rv_tables_6" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_tables_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="128dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/rv_tables_7" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

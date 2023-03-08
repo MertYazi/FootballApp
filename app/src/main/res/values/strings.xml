@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">FootballApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="matches_today">Matches Today</string>
+    <string name="leagues">Leagues</string>
+    <string name="saved_matches">Saved Matches</string>
+    <string name="image_home_team">Home Team Image</string>
+    <string name="image_away_team">Away Team Image</string>
+    <string name="filter_matches">Filter Matches</string>
+    <string name="live_matches">Live Matches</string>
+    <string name="no_live_matches">There are no live matches</string>
+    <string name="image_league">League Image</string>
+    <string name="image_team">Team Image</string>
+    <string name="teams">Teams</string>
+    <string name="games_played">GP</string>
+    <string name="won">W</string>
+    <string name="drawn">D</string>
+    <string name="lost">L</string>
+    <string name="points">PTS</string>
+    <string name="matches">Matches</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="match_saved">Match saved successfully</string>
+    <string name="all_matches">All Matches</string>
+</resources>

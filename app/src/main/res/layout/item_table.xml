@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingStart="0dp"
+    android:paddingEnd="16dp"
+    android:background="?attr/selectableItemBackground"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_position"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="0dp"
+        android:paddingEnd="4dp"
+        android:gravity="end"
+        tools:text="1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_emblem"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_emblem"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        tools:src="@drawable/ic_ball"
+        app:layout_constraintStart_toEndOf="@+id/tv_position"
+        app:layout_constraintEnd_toStartOf="@+id/tv_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="0dp"
+        tools:text="Arsenal"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iv_emblem"
+        app:layout_constraintEnd_toStartOf="@+id/tv_played"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_played"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        tools:text="9"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_won"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_won"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        tools:text="7"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_drawn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_drawn"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        tools:text="0"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_lost"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_lost"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        tools:text="1"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_points"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_points"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        tools:text="1"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

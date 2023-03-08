@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/matchesTodayFragment"
+        android:title="@string/matches_today"
+        android:icon="@drawable/ic_ball" />
+
+    <item android:id="@+id/savedMatchesFragment"
+        android:title="@string/saved_matches"
+        android:icon="@drawable/ic_saved_matches" />
+
+    <item android:id="@+id/leaguesFragment"
+        android:title="@string/leagues"
+        android:icon="@drawable/ic_leagues" />
+
+</menu>

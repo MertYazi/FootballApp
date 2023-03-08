@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/matchesTodayFragment">
+
+    <fragment
+        android:id="@+id/matchesTodayFragment"
+        android:name="com.mertyazi.footballapp.view.fragments.MatchesTodayFragment"
+        android:label="@string/matches_today"
+        tools:layout="@layout/fragment_matches_today" >
+        <action
+            android:id="@+id/action_matchesTodayFragment_to_teamDetailsFragment"
+            app:destination="@id/teamDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="teamId"
+            app:argType="integer" />
+        <argument
+            android:name="teamName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedMatchesFragment"
+        android:name="com.mertyazi.footballapp.view.fragments.SavedMatchesFragment"
+        android:label="@string/saved_matches"
+        tools:layout="@layout/fragment_saved_matches" >
+        <action
+            android:id="@+id/action_savedMatchesFragment_to_teamDetailsFragment"
+            app:destination="@id/teamDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/leaguesFragment"
+        android:name="com.mertyazi.footballapp.view.fragments.LeaguesFragment"
+        android:label="@string/leagues"
+        tools:layout="@layout/fragment_leagues" >
+        <action
+            android:id="@+id/action_leaguesFragment_to_leagueTableFragment"
+            app:destination="@id/leagueTableFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/leagueTableFragment"
+        android:name="com.mertyazi.footballapp.view.fragments.LeagueTableFragment"
+        android:label=""
+        tools:layout="@layout/fragment_league_table" >
+        <action
+            android:id="@+id/action_leagueTableFragment_to_teamDetailsFragment"
+            app:destination="@id/teamDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="leagueCode"
+            app:argType="string" />
+        <argument
+            android:name="leagueName"
+            app:argType="string" />
+        <argument
+            android:name="leagueEmblem"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/teamDetailsFragment"
+        android:name="com.mertyazi.footballapp.view.fragments.TeamDetailsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_team_details">
+        <argument
+            android:name="teamId"
+            app:argType="integer" />
+        <argument
+            android:name="teamName"
+            app:argType="string" />
+        <argument
+            android:name="teamEmblem"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
