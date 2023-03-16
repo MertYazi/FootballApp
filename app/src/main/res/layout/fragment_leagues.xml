@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".view.fragments.LeaguesFragment">
+    tools:context=".leagues.presentation.LeaguesFragment">
 
     <TextView
         android:id="@+id/tv_leagues"
@@ -28,5 +28,17 @@
         android:layout_marginTop="36dp"
         app:layout_constraintTop_toBottomOf="@+id/tv_leagues"
         app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="32dp"
+        android:minWidth="32dp"
+        android:indeterminateTint="@color/primaryDarkColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

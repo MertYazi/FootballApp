@@ -6,7 +6,7 @@
     android:id="@+id/srl_matches_today"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.fragments.MatchesTodayFragment">
+    tools:context=".matches_today.presentation.MatchesTodayFragment">
 
     <TextView
         android:id="@+id/tv_matches_today"
@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:paddingBottom="80dp"
+        android:paddingBottom="96dp"
         android:fillViewport="true"
         android:scrollbars="none"
         app:layout_constraintTop_toBottomOf="@+id/tv_matches_today">
@@ -96,7 +96,9 @@
                 android:id="@+id/rv_matches_today"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="12dp"
                 android:nestedScrollingEnabled="false"
                 app:layout_constraintTop_toBottomOf="@+id/tv_timed_matches_today"
                 app:layout_constraintBottom_toBottomOf="parent" />
@@ -104,5 +106,17 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="32dp"
+        android:minWidth="32dp"
+        android:indeterminateTint="@color/primaryDarkColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
