@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">FootballApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="matches_today">Matches Today</string>
     <string name="leagues">Leagues</string>
     <string name="saved_matches">Saved Matches</string>
@@ -22,5 +20,7 @@
     <string name="save">Save</string>
     <string name="delete">Delete</string>
     <string name="match_saved">Match saved successfully</string>
+    <string name="match_deleted">Match deleted successfully</string>
     <string name="all_matches">All Matches</string>
+    <string name="live">Live</string>
 </resources>

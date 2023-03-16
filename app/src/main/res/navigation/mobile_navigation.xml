@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/matchesTodayFragment"
-        android:name="com.mertyazi.footballapp.view.fragments.MatchesTodayFragment"
+        android:name="com.mertyazi.footballapp.matches_today.presentation.MatchesTodayFragment"
         android:label="@string/matches_today"
         tools:layout="@layout/fragment_matches_today" >
         <action
@@ -26,7 +26,7 @@
     </fragment>
     <fragment
         android:id="@+id/savedMatchesFragment"
-        android:name="com.mertyazi.footballapp.view.fragments.SavedMatchesFragment"
+        android:name="com.mertyazi.footballapp.saved_matches.presentation.SavedMatchesFragment"
         android:label="@string/saved_matches"
         tools:layout="@layout/fragment_saved_matches" >
         <action
@@ -39,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/leaguesFragment"
-        android:name="com.mertyazi.footballapp.view.fragments.LeaguesFragment"
+        android:name="com.mertyazi.footballapp.leagues.presentation.LeaguesFragment"
         android:label="@string/leagues"
         tools:layout="@layout/fragment_leagues" >
         <action
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/leagueTableFragment"
-        android:name="com.mertyazi.footballapp.view.fragments.LeagueTableFragment"
+        android:name="com.mertyazi.footballapp.league_table.presentation.LeagueTableFragment"
         android:label=""
         tools:layout="@layout/fragment_league_table" >
         <action
@@ -74,9 +74,12 @@
     </fragment>
     <fragment
         android:id="@+id/teamDetailsFragment"
-        android:name="com.mertyazi.footballapp.view.fragments.TeamDetailsFragment"
+        android:name="com.mertyazi.footballapp.team_details.presentation.TeamDetailsFragment"
         android:label=""
         tools:layout="@layout/fragment_team_details">
+        <action
+            android:id="@+id/action_teamDetailsFragment_self"
+            app:destination="@id/teamDetailsFragment" />
         <argument
             android:name="teamId"
             app:argType="integer" />
